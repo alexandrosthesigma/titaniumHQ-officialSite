@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TitaniumHQ Scripts offers powerful and reliable Roblox exploiting tools. Download our free edition or get the premium toolkit for an enhanced experience. Join our community today!">
+  <title>TitaniumHQ Scripts - Roblox Exploiting Tools</title>
+  <style>
+    /* Global Styles & Variables */
+    :root {
+      --charcoal: #111111;
+      --indigo: #3F51B5;
+      --accent-orange: #ff7800;
+      --neutral-white: #f0f0f0;
+      --light-gray: #cccccc;
+      --dark-gray: #222222;
+      --border-radius: 8px;
+      --shadow: 0 2px 6px rgba(0,0,0,.08);
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      background-color: var(--charcoal);
+      color: var(--neutral-white);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+      margin-bottom: 0.8em;
+      color: var(--indigo);
+    }
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    a {
+      color: var(--accent-orange);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    img, svg {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .button, button {
+      display: inline-block;
+      padding: 12px 25px;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s ease, opacity 0.3s ease;
+      box-shadow: var(--shadow);
+      text-decoration: none; /* For <a> tags styled as buttons */
+    }
+    .button:hover, button:hover {
+      opacity: 0.85;
+      text-decoration: none; /* For <a> tags styled as buttons */
+    }
+
+    /* Header / Hero Banner */
+    .hero-banner {
+      background-color: var(--charcoal); /* Already dark, could add subtle gradient or texture */
+      color: var(--neutral-white);
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .hero-banner h1 {
+      font-size: 3rem;
+      color: var(--neutral-white);
+      margin-bottom: 20px;
+    }
+    .hero-banner .tagline {
+      font-size: 1.3rem;
+      color: var(--light-gray);
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+    .hero-banner .cta-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap; /* For smaller screens */
+      justify-content: center;
+    }
+    .hero-banner .cta-button-free {
+      background-color: var(--indigo);
+      color: var(--neutral-white);
+    }
+    .hero-banner .cta-button-premium {
+      background-color: var(--accent-orange);
+      color: var(--charcoal);
+    }
+
+    /* Features Section */
+    #features {
+      background-color: var(--dark-gray); /* Slightly lighter than charcoal */
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .feature-card {
+      background-color: var(--charcoal);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      text-align: left;
+    }
+    .feature-card .icon {
+      font-size: 2.5rem; /* Adjust as needed */
+      color: var(--accent-orange);
+      margin-bottom: 15px;
+      display: block; /* Or inline-block if text is next to it */
+    }
+    .feature-card h3 {
+      color: var(--indigo);
+      margin-bottom: 10px;
+    }
+    .feature-card p {
+      color: var(--light-gray);
+      font-size: 0.95rem;
+    }
+
+    /* Download / Purchase Section */
+    #download-purchase {
+      background-color: var(--charcoal);
+    }
+    .download-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .download-options .button {
+      background-color: var(--indigo);
+      color: var(--neutral-white);
+      min-width: 200px;
+    }
+    .download-options .button.roblox-pass {
+      background-color: var(--accent-orange);
+      color: var(--charcoal);
+    }
+    .download-options .button.discord-link {
+      background-color: #5865F2; /* Discord Blue */
+      color: var(--neutral-white);
+    }
+
+
+    /* FAQ Section */
+    #faq {
+      background-color: var(--dark-gray);
+    }
+    .faq-accordion {
+      max-width: 750px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background-color: var(--charcoal);
+      margin-bottom: 10px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      overflow: hidden; /* To contain rounded corners with button */
+    }
+    .faq-question {
+      background-color: transparent; /* Button takes item background */
+      color: var(--neutral-white);
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 18px 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s ease;
+    }
+    .faq-question:hover {
+      background-color: rgba(255,255,255,0.05);
+    }
+    .faq-question::after {
+      content: '+';
+      font-size: 1.8rem;
+      color: var(--accent-orange);
+      transition: transform 0.3s ease;
+    }
+    .faq-question.active::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 20px; /* Horizontal padding */
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding-top 0.3s ease-out, padding-bottom 0.3s ease-out;
+      color: var(--light-gray);
+      font-size: 0.95rem;
+    }
+    .faq-answer p {
+        margin:0; /* Reset paragraph margin if directly inside */
+    }
+    /* JS will add .active to .faq-question, then style answer based on that */
+    .faq-question.active + .faq-answer {
+      /* max-height set by JS */
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+
+
+    /* Contact Section (Footer) */
+    .site-footer {
+      background-color: #0a0a0a; /* Even darker charcoal */
+      color: var(--light-gray);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .site-footer h2 {
+      color: var(--indigo);
+      margin-bottom: 20px;
+    }
+    .site-footer p {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+    .site-footer a {
+      color: var(--accent-orange);
+    }
+
+    /* Scroll-to-top Button */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: var(--accent-orange);
+      color: var(--charcoal);
+      border: none;
+      border-radius: var(--border-radius);
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+      cursor: pointer;
+      display: none; /* Hidden by default */
+      box-shadow: 0 2px 8px rgba(0,0,0,.2);
+      z-index: 1000;
+      line-height: 45px; /* Vertically center arrow */
+      text-align: center;
+    }
+    #scrollToTopBtn:hover {
+      background-color: #e06700; /* Darker orange */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+      .hero-banner h1 {
+        font-size: 2.5rem;
+      }
+      .hero-banner .tagline {
+        font-size: 1.1rem;
+      }
+      .features-grid {
+        grid-template-columns: 1fr; /* Stack cards */
+      }
+      section {
+        padding: 40px 15px;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-banner h1 {
+        font-size: 2rem;
+      }
+      .button, button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+      .download-options .button {
+        min-width: 100%; /* Make download buttons full width */
+      }
+      .faq-question {
+        padding: 15px;
+        font-size: 1rem;
+      }
+      .faq-question::after {
+        font-size: 1.5rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header / Hero Banner -->
+  <header class="hero-banner">
+    <div class="container">
+      <h1>TitaniumHQ Scripts</h1>
+      <p class="tagline">Unlock the Next Level of Roblox Gameplay with Our Powerful Exploiting Tools.</p>
+      <div class="cta-buttons">
+        <button class="button cta-button-free" onclick="document.getElementById('download-purchase').scrollIntoView({behavior: 'smooth'});">Download Free</button>
+        <button class="button cta-button-premium" onclick="document.getElementById('download-purchase').scrollIntoView({behavior: 'smooth'});">Buy Premium</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Features Section -->
+    <section id="features">
+      <div class="container">
+        <h2>Core Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="icon">⚙️</span>
+            <h3>Free Edition</h3>
+            <p>Get started with a selection of essential scripts and features, completely free. Perfect for casual users looking to explore new possibilities.</p>
+          </div>
+          <div class="feature-card">
+            <span class="icon">💡</span>
+            <h3>Premium Toolkit</h3>
+            <p>Unlock the full potential with advanced scripts, exclusive features, priority support, and regular updates for the ultimate edge.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download / Purchase Section -->
+    <section id="download-purchase">
+      <div class="container">
+        <h2>Download / Purchase</h2>
+        <div class="download-options">
+          <a href="https://github.com/your-repo/releases/latest" target="_blank" rel="noopener" class="button">GitHub Release (Free)</a>
+          <a href="https://www.roblox.com/game-pass/1231004134" target="_blank" rel="noopener" class="button roblox-pass">Roblox Game Pass (Premium)</a>
+          <a href="https://discord.gg/sq8tnFCKg7" target="_blank" rel="noopener" class="button discord-link">Join Our Discord</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">What is TitaniumHQ Scripts?</button>
+            <div class="faq-answer">
+              <p>TitaniumHQ Scripts provides a suite of tools designed to enhance your Roblox gameplay experience. We offer both free and premium versions to cater to different user needs.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is it safe to use?</button>
+            <div class="faq-answer">
+              <p>We prioritize user safety. Our scripts are regularly updated and tested. However, using any third-party tools on Roblox carries inherent risks. Always download from official sources and use responsibly.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I install the free version?</button>
+            <div class="faq-answer">
+              <p>You can download the free version from our official GitHub releases page. Instructions are typically included in the download or on the GitHub page.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What are the benefits of Premium?</button>
+            <div class="faq-answer">
+              <p>The Premium Toolkit offers access to more powerful scripts, exclusive features not found in the free version, faster updates, and dedicated support through our Discord community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Section (Footer) -->
+  <footer class="site-footer">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or need support? Join our community!</p>
+      <p>
+        <a href="https://discord.gg/sq8tnFCKg7" target="_blank" rel="noopener">Join our Discord Server</a>
+      </p>
+      <p>
+        For business inquiries: <a href="mailto:support@titaniumhq.example.com">support@titaniumhq.example.com</a> (placeholder)
+      </p>
+      <p>&copy; 2025 TitaniumHQ Scripts. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top Button -->
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+  <script>
+    // Vanilla JS (Accordion & Scroll-to-Top)
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const isActive = button.classList.toggle('active');
+        // answer.classList.toggle('active', isActive); // CSS handles this via adjacent sibling selector
+
+        if (isActive) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = null;
+        }
+      });
+    });
+
+    // Scroll-to-Top Button
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const scrollThreshold = 200; // Show button after scrolling 200px
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+        scrollToTopBtn.style.display = 'block';
+      } else {
+        scrollToTopBtn.style.display = 'none';
+      }
+    };
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
+
+</body>
+</html>
